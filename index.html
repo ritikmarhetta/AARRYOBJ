@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arry of obj</title>
+</head>
+<body>
+    <pre><h4>
+        let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ]
+    </h4></pre>
+
+    <br />
+    <hr />
+
+    <p>
+      <h3>
+        1) We are interested in retrieving only the name of the students and all
+        the names should be in caps.
+        <br />['JOHN', 'BABA', 'YAGA', 'WICK']
+      </h3>
+    </p>
+    <pre>
+        let ans=[];
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            ans.push(studentRecords[i].name.toUppercase());
+        }
+        console.log(ans);
+    </pre>
+    <hr />
+    <p>
+      <h3>
+        2) Suppose we have the same dataset as above but this time we want to
+        get the details of students who scored more than 50 marks.
+        <br />[{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115,
+        marks : 75 }]</h3 >
+    </p>
+    <pre>
+        let ans=[];
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            if(studentRecords[i].marks>50)
+            {
+                ans.push(studentRecords[i]);
+            } 
+        }
+        console.log(ans);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        3) Retrieve the details of students who scored more than 50 marks and
+        have id greater than 120.
+      </h3>
+    </p>
+    <pre>
+        let ans=[];
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            if(studentRecords[i].marks > 50 && studentRecords[i].id > 120)
+            {
+                ans.push(studentRecords[i]);
+            } 
+        }
+        console.log(ans);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        4) Consider the same scenario we have discussed above, but this time we
+        would like to know the sum total of the marks of the students.
+      </h3>
+    </p>
+    <pre>
+        let sumtotal=0;
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            sumtotal += studentRecords[i].marks;
+        }
+        console.log(sumtotal);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        5) This time we want to get only the names of the students who scored
+        more than 50 marks from the same dataset used above.
+      </h3>
+    </p>
+    <pre>
+        let ans=[];
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            if(studentRecords[i].marks > 50)
+            {
+                ans.push(studentRecords[i].name);
+            } 
+        }
+        console.log(ans);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        6) This time we are required to print the sum of marks of the students
+        with id > 120.
+      </h3>
+    </p>
+    <pre>
+        let total = 0;
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            if(studentRecords[i].id > 120)
+            {
+                total += studentRecords[i].marks;
+            }
+        }
+        console.log(total);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        7) This time we are required to print the total marks of the students
+        with marks greater than 50 after a grace of 15 marks has been added to
+        those students who scored less than 50.
+      </h3>
+    </p>
+    <pre>
+        let sum = 0;
+        for(let i=0; i < studentRecords.length; i++)
+        {
+            if(studentRecords[i].marks < 50)
+            {
+                studentRecords[i].marks += 15;
+            }
+            sum += studentRecords[i].marks;
+        }
+        console.log(sum);
+    </pre>
+    <hr />
+
+    <p>
+      <h3>
+        8) Create 6 objects , each object will have name, class, roll no as
+        properties. Store these objects in an array of objects.
+      </h3>
+    </p>
+    <pre>
+        let classRegister = [
+            student1 = {
+                name: Park Bogum,
+                class: 12,
+                rollNo: 1
+            },
+            student2 = {
+                name: Jimin Karina,
+                class: 10,
+                rollNo: 5
+            },
+            student3 = {
+                name: Lee Taeyong,
+                class: 11,
+                rollNo: 3
+            },
+            student4 = {
+                name: Sa Hyejun,
+                class: 12,
+                rollNo: 7
+            },
+            student5 = {
+                name: Kim Taeri,
+                class: 11,
+                rollNo: 8
+            },
+            student6 = {
+                name: Nam Joohyuk,
+                class: 10,
+                rollNo: 7
+            }
+        ]
+    </pre>
+</body>
+</html>
